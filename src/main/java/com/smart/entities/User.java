@@ -12,6 +12,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.ManyToAny;
 
@@ -22,6 +24,9 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
+	
+	@NotBlank(message="Name field is required")
+	@Size(min=2,max=10,message="min 2 and max 20 characters are allowed")
 	private String name;
 	@Column(unique = true)
 	private String email;
