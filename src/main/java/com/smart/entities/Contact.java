@@ -32,10 +32,7 @@ public class Contact {
 	
 	
 	
-	public Contact() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+
 	public int getcId() {
 		return cId;
 	}
@@ -89,6 +86,29 @@ public class Contact {
 	}
 	public void setUser(User user) {
 		this.user = user;
+	}
+	@Override
+	public String toString() {
+		return "Contact [cId=" + cId + ", name=" + name + ", SecondName=" + SecondName + ", work=" + work + ", email="
+				+ email + ", phone=" + phone + ", image=" + image + ", description=" + description + ", user=" + user
+				+ "]";
+	}
+	public Contact(int cId, String name, String secondName, String work, String email, String phone, String image,
+			String description, User user) {
+		super();
+		this.cId = cId;
+		this.name = name;
+		SecondName = secondName;
+		this.work = work;
+		this.email = email;
+		this.phone = phone;
+		this.image = image;
+		this.description = description;
+		this.user = user;
+	}
+	public Contact() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 	
 
